@@ -23,7 +23,8 @@ const details: {
 	},
 	{
 		type: DetailType.description,
-		content: "Whatever you do, do it a hundred percent. 🚀",
+		content: "有些人之间，注定只要相逢，就是对的。\n如果还能重逢，就是最好的。",
+		// "The world's full of lonely people afraid to make the first move. 🚀",
 	},
 ];
 
@@ -34,7 +35,7 @@ const getClass = (type: DetailType) => {
 		case DetailType.subtitle:
 			return "text-xs font-light tracking-wide md:text-sm duration-300";
 		case DetailType.description:
-			return "text-sm font-normal tracking-wide md:text-base animate-fade-in duration-300";
+			return "text-sm font-normal tracking-wide md:text-base animate-fade-in duration-300 text-center whitespace-pre font-lxgw-wenkai";
 	}
 };
 ---

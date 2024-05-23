@@ -1,4 +1,5 @@
 ---
+import { join } from "node:path";
 import { AstroFont } from "astro-font";
 import Footer from "../components/Footer.astro";
 
@@ -12,7 +13,7 @@ const { title, siteName, siteDescription } = Astro.props;
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="en" class="h-full">
 	<head>
 		<meta charset="utf-8" /><link
 			rel="apple-touch-icon"
@@ -40,6 +41,7 @@ const { title, siteName, siteDescription } = Astro.props;
 		<meta property="og:title" content={title} />
 		<meta property="og:description" content={siteDescription} />
 		<link rel="sitemap" href="/sitemap-index.xml" />
+
 		<AstroFont
 			config={[
 				{
@@ -52,15 +54,34 @@ const { title, siteName, siteDescription } = Astro.props;
 					googleFontsURL:
 						"https://fonts.googleapis.com/css2?family=Sora:wght@100..800",
 				},
+				{
+					name: "LXGW WenKai",
+					src: [
+						{
+							style: "normal",
+							weight: "400",
+							path: join(
+								process.cwd(),
+								"public",
+								"fonts",
+								"LXGWWenKaiScreen.ttf"
+							),
+						},
+					],
+					preload: true,
+					display: "swap",
+					selector: ".font-lxgw-wenkai",
+					fallback: "sans-serif",
+				},
 			]}
 		/>
 	</head>
-	<body>
+	<body class="h-full">
 		<div
-			class="bg-zinc-100 bg-horizonAnimated bg-cover bg-scroll bg-center bg-no-repeat"
+			class="bg-zinc-100 bg-horizonAnimated bg-cover bg-scroll bg-center bg-no-repeat h-full"
 		>
 			<div
-				class="grid min-h-dvh grid-cols-1 place-content-center place-items-center gap-5"
+				class="grid min-h-dvh grid-cols-1 place-content-center place-items-center gap-5 h-full"
 			>
 				<slot />
 			</div>
