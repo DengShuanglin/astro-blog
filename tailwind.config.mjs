@@ -3,6 +3,9 @@ export default {
 	content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
 	theme: {
 		extend: {
+			fontFamily: {
+				"lxgw-wenkai": ["LXGW WenKai Screen", "sans-serif"],
+			},
 			backgroundImage: {
 				horizonAnimated: "url('/assets/svg/backgrounds/horizon-animated.svg')",
 				horizon: "url('/assets/svg/backgrounds/horizon.svg')",

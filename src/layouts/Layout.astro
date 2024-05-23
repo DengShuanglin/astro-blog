@@ -41,6 +41,10 @@ const { title, siteName, siteDescription } = Astro.props;
 		<meta property="og:title" content={title} />
 		<meta property="og:description" content={siteDescription} />
 		<link rel="sitemap" href="/sitemap-index.xml" />
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-screen-webfont@1.7.0/style.min.css"
+		/>
 
 		<AstroFont
 			config={[
@@ -54,25 +58,40 @@ const { title, siteName, siteDescription } = Astro.props;
 					googleFontsURL:
 						"https://fonts.googleapis.com/css2?family=Sora:wght@100..800",
 				},
-				{
-					name: "LXGW WenKai",
-					src: [
-						{
-							style: "normal",
-							weight: "400",
-							path: join(
-								process.cwd(),
-								"public",
-								"fonts",
-								"LXGWWenKaiScreen.ttf"
-							),
-						},
-					],
-					preload: true,
-					display: "swap",
-					selector: ".font-lxgw-wenkai",
-					fallback: "sans-serif",
-				},
+				// {
+				// 	name: "LXGW WenKai",
+				// 	src: [
+				// 		{
+				// 			style: "normal",
+				// 			weight: "400",
+				// 			// Picked up font URL by manually visiting Google Fonts URL
+				// 			path: "https://cdn.bootcdn.net/ajax/libs/lxgw-wenkai-screen-webfont/1.7.0/files/lxgwwenkaigbscreen-subset-100.woff2",
+				// 		},
+				// 	],
+				// 	preload: true,
+				// 	display: "swap",
+				// 	selector: ".font-lxgw-wenkai",
+				// 	fallback: "sans-serif",
+				// },
+				// {
+				// 	name: "LXGW WenKai",
+				// 	src: [
+				// 		{
+				// 			style: "normal",
+				// 			weight: "400",
+				// 			path: join(
+				// 				process.cwd(),
+				// 				"public",
+				// 				"fonts",
+				// 				"LXGWWenKaiScreen.ttf"
+				// 			),
+				// 		},
+				// 	],
+				// 	preload: true,
+				// 	display: "swap",
+				// 	selector: ".font-lxgw-wenkai",
+				// 	fallback: "sans-serif",
+				// },
 			]}
 		/>
 	</head>
