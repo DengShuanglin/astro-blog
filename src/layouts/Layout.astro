@@ -1,5 +1,6 @@
 ---
 import { AstroFont } from "astro-font";
+import Footer from "../components/Footer.astro";
 
 interface Props {
 	title: string;
@@ -64,6 +65,6 @@ const { title, siteName, siteDescription } = Astro.props;
 				<slot />
 			</div>
 		</div>
-		<footer></footer>
+		<Footer />
 	</body>
 </html>
