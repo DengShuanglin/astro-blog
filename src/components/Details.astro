@@ -4,9 +4,9 @@
  */
 
 enum DetailType {
-	title = "title",
-	subtitle = "subtitle",
-	description = "description",
+	title = 'title',
+	subtitle = 'subtitle',
+	description = 'description',
 }
 
 const details: {
@@ -19,11 +19,11 @@ const details: {
 	},
 	{
 		type: DetailType.subtitle,
-		content: "Frontend & Backend Developer | AI Enthusiast | Tech Blogger",
+		content: 'Frontend & Backend Developer | AI Enthusiast | Tech Blogger',
 	},
 	{
 		type: DetailType.description,
-		content: "有些人之间，注定只要相逢，就是对的。\n如果还能重逢，就是最好的。",
+		content: '有些人之间，注定只要相逢，就是对的。\n如果还能重逢，就是最好的。',
 		// "The world's full of lonely people afraid to make the first move. 🚀",
 	},
 ];
@@ -31,11 +31,11 @@ const details: {
 const getClass = (type: DetailType) => {
 	switch (type) {
 		case DetailType.title:
-			return "font-sora text-4xl font-bold tracking-wide md:text-5xl animate-fade-up duration-300";
+			return 'font-sora text-4xl font-bold tracking-wide md:text-5xl animate-fade-up duration-300';
 		case DetailType.subtitle:
-			return "text-xs font-light tracking-wide md:text-sm duration-300";
+			return 'text-xs font-light tracking-wide md:text-sm duration-300';
 		case DetailType.description:
-			return "text-sm font-normal tracking-wide md:text-base animate-fade-in duration-300 text-center whitespace-pre font-lxgw-wenkai";
+			return 'text-sm font-normal tracking-wide md:text-base animate-fade-in duration-300 text-center whitespace-pre font-lxgw-wenkai';
 	}
 };
 ---

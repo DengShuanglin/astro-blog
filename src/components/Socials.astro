@@ -10,16 +10,16 @@
  */
 
 enum Type {
-	linkedIn = "LinkedIn",
-	gitHub = "GitHub",
-	twitter = "Twitter",
-	instagram = "Instagram",
-	email = "Email",
-	titok = "TikTok",
-	bilibili = "Bilibili",
-	netMusic = "NetMusic",
-	Astro = "Astro",
-	TailwindCSS = "TailwindCSS",
+	linkedIn = 'LinkedIn',
+	gitHub = 'GitHub',
+	twitter = 'Twitter',
+	instagram = 'Instagram',
+	email = 'Email',
+	titok = 'TikTok',
+	bilibili = 'Bilibili',
+	netMusic = 'NetMusic',
+	Astro = 'Astro',
+	TailwindCSS = 'TailwindCSS',
 }
 
 const socials = [
@@ -37,47 +37,46 @@ const socials = [
 	// },
 	{
 		name: Type.gitHub,
-		url: "https://github.com/DengShuanglin",
-		icon: "assets/svg/icons/github.svg",
-		color: "bg-gray-200",
+		url: 'https://github.com/DengShuanglin',
+		icon: 'assets/svg/icons/github.svg',
+		color: 'bg-gray-200',
 	},
 	{
 		name: Type.bilibili,
-		url: "https://space.bilibili.com/110133689",
-		icon: "assets/svg/icons/bilibili.svg",
-		color: "bg-sky-400",
+		url: 'https://space.bilibili.com/110133689',
+		icon: 'assets/svg/icons/bilibili.svg',
+		color: 'bg-sky-400',
 	},
 	{
 		name: Type.netMusic,
-		url: "https://music.163.com/#/user/home?id=483103235",
-		icon: "assets/svg/icons/netMusic.svg",
-		color: "bg-red-600",
+		url: 'https://music.163.com/#/user/home?id=483103235',
+		icon: 'assets/svg/icons/netMusic.svg',
+		color: 'bg-red-600',
 	},
 	{
 		name: Type.email,
-		url: "shuanglindev@gmail.com",
-		icon: "assets/svg/icons/email.svg",
-		color: "bg-slate-400",
+		url: 'shuanglindev@gmail.com',
+		icon: 'assets/svg/icons/email.svg',
+		color: 'bg-slate-400',
 	},
 	{
 		name: Type.Astro,
-		url: "https://docs.astro.build/zh-cn/getting-started/",
-		icon: "assets/svg/icons/astro.svg",
-		color: "bg-gray-300",
+		url: 'https://docs.astro.build/zh-cn/getting-started/',
+		icon: 'assets/svg/icons/astro.svg',
+		color: 'bg-gray-300',
 	},
 	{
 		name: Type.TailwindCSS,
-		url: "https://tailwindcss.com/docs",
-		icon: "assets/svg/icons/tailwindcss.svg",
-		color: "bg-Zinc-100",
+		url: 'https://tailwindcss.com/docs',
+		icon: 'assets/svg/icons/tailwindcss.svg',
+		color: 'bg-Zinc-100',
 	},
 ];
 
-const getColor = (type: Type) =>
-	socials.find((social) => social.name === type)?.color;
+const getColor = (type: Type) => socials.find((social) => social.name === type)?.color;
 const getClass = (type: Type) =>
 	`scale-100 rounded-full border-2 border-gray-950 ${getColor(
-		type
+		type,
 	)} transition duration-300 hover:scale-110 animate-zoom-in`;
 ---
 
