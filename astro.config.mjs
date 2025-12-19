@@ -11,4 +11,9 @@ export default defineConfig({
 	// adapter: vercel(),
 	integrations: [tailwind()],
 	outDir: '/root/web/homepage',
+	// update server config to support local develop and review
+	server: {
+		host: true,
+		port: 4321,
+	},
 });
